@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
 
+
 function App() {
 
   const expenses = [
@@ -24,7 +25,6 @@ function App() {
     },
   ];
 
-
   return (
     <div className="App">
      <ExpenseItem
@@ -47,12 +47,11 @@ function App() {
       amount = {expenses[3].amount}
       date = {expenses[3].date}
       />
-
-      
-    
      <p>Justus Sydänmaa / VAMK / BIT</p>
     </div>
   );
 }
 
 export default App;
+
+

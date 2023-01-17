@@ -29,11 +29,18 @@ const App = () => {
       amount: 450,
       date: new Date("2023-01-09"),
     },
-  ];
+  ]
+
+  const addExpenseHandler = expense => {
+    console.log("In App.js")
+    console.log(expense)
+  }
+
+
 
   return (
     <div className="App">
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses expenses={expenses}/>
      <p>Justus Sydänmaa / VAMK / BIT</p>
     </div>

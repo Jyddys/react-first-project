@@ -39,10 +39,22 @@ const App = () => {
     // console.log("In App.js")
     // console.log(expense)
   }
+
+  const handleRemoveItem = (itemId) => {
+    setExpenses(expenses => {
+        const updatedItems = expenses.filter(item => item.id !== itemId)
+        return updatedItems
+    })
+    console.log(expenses[1].id)
+
+
+ }
+
+
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expenses expenses={expenses}/>
+      <Expenses expenses={expenses} removeItem={handleRemoveItem} setExpenses={setExpenses}/>
      <p>Justus Sydänmaa / VAMK / BIT</p>
     </div>
   );

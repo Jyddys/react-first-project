@@ -16,10 +16,11 @@ const ExpensesList = props => {
                 <ExpenseItem
                 expenses={props.expenses}
                 key={expense.id}
+                id={expense.id}
                 title={expense.title}
                 amount={expense.amount}
                 date={expense.date}
-                handleRemoveItem={expense.handleRemoveItem}
+                removeItem={props.removeItem}
                 />
              ))}
         </ul>
